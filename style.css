@@ -1263,33 +1263,35 @@ body[data-current-theme="dark"] .video-placeholder { background-color: rgba(255,
     }
 
     .mwg_effect040 .parent-circle {
-        width: 150vw;
-        height: 150vw;
+        width: 200vw;
+        height: 200vw;
     }
     .mwg_effect040 .parent-circle-left {
-        right: 35%; /* Center of rotation placed correctly so they meet at 65vw */
+        right: 50%; /* Center of rotation placed perfectly so they meet at 50vw */
     }
     .mwg_effect040 .parent-circle-right {
-        left: 65%; /* Center of rotation placed correctly so they meet at 65vw */
+        left: 50%; /* Center of rotation placed perfectly so they meet at 50vw */
     }
     .mwg_effect040 .media {
-        width: 15vw;
-        height: 15vw;
-        min-width: 60px;
-        min-height: 60px;
+        width: 14vw;
+        height: 14vw;
+        min-width: 50px;
+        min-height: 50px;
     }
     .mwg_effect040 .media svg {
-        width: 28px;
-        height: 28px;
+        width: 24px;
+        height: 24px;
     }
     .mwg_effect040 .label {
-        padding-right: 6vw; /* Space between text and squares */
+        padding-right: 4vw; /* Space between text and squares */
+        white-space: normal; /* Allow long descriptions to wrap naturally */
+        max-width: 45vw; /* Prevent text from pushing off-screen on the left */
     }
     .mwg_effect040 .label h4 {
-        font-size: 1.15rem;
+        font-size: 1.05rem;
     }
     .mwg_effect040 .label p {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 }
 
