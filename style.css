@@ -483,7 +483,7 @@ body[data-current-theme="dark"] .video-placeholder { background-color: rgba(255,
     white-space: nowrap;
     gap: 20px;
     will-change: transform;
-    padding: 0 calc(50vw - 185px) 0 100vw;
+    padding: 0 calc(50vw - 575px) 0 100vw;
 }
 .mwg_effect087 .card {
     position: relative;
