@@ -419,11 +419,11 @@ document.addEventListener('DOMContentLoaded', () => {
       centeredSlides: true,
       breakpoints: {
         768: {
-          slidesPerView: 2.2,
+          slidesPerView: 1.5,
           spaceBetween: 30,
         },
         1024: {
-          slidesPerView: 2.5,
+          slidesPerView: 1.8,
           spaceBetween: 40,
         }
       },
