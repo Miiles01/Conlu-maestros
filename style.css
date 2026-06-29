@@ -1488,7 +1488,7 @@ body[data-current-theme="dark"] .video-placeholder { background-color: rgba(255,
   bottom: 16px;
   left: 16px;
   background: var(--color-lime);
-  color: var(--color-deep-blue);
+  color: #fff;
   border: none;
   border-radius: 50%;
   width: 40px;
