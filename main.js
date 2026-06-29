@@ -486,15 +486,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Hero Background Animation Loop
-  const heroSection = document.querySelector('.hero');
-  if (heroSection) {
-    const toggleHeroTheme = () => {
-      heroSection.classList.toggle('hero--blue');
-    };
-
-    setTimeout(() => {
-      toggleHeroTheme();
-      setInterval(toggleHeroTheme, 20000);
-    }, 4000);
-  }
