@@ -1427,8 +1427,6 @@ body[data-current-theme="dark"] .video-placeholder { background-color: rgba(255,
   padding: 40px 0;
   margin: -40px 0;
   overflow: hidden;
-  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
 }
 .video-card {
   position: relative;
