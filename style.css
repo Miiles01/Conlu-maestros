@@ -1521,10 +1521,16 @@ body[data-current-theme="dark"] .video-placeholder { background-color: rgba(255,
 
 .problem-hero-img {
   width: 100%;
-  max-height: 450px;
+  max-width: 900px;
+  height: auto;
   object-fit: cover;
   border-radius: var(--radius-lg);
-  margin-bottom: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem auto 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   display: block;
+}
+
+.footer__bottom p {
+  color: var(--color-white);
+  margin-bottom: 0;
 }
