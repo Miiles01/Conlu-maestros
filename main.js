@@ -69,55 +69,68 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 3. MWG Effect 075 (Problem Cards Animation)
-  const mwgRoot = document.querySelector('.mwg_effect075')
-  if (mwgRoot && window.innerWidth >= 768) {
-    const pinHeight = mwgRoot.querySelector('.pin-height')
-    const animationContainer = mwgRoot.querySelector('.animation-container')
-    const circlesElement = mwgRoot.querySelector('.circles')
-    const circles = mwgRoot.querySelectorAll('.circle')
-    const angle = 5
+  // 3. MWG Effect 087 (Problem Cards Animation)
+  const root = document.querySelector('.mwg_effect087')
+  if (root && window.innerWidth >= 768) {
+      const container = root.querySelector('.container')
+      const cardsContainer = root.querySelector('.cards')
+      const cards = root.querySelectorAll('.card')
 
-    let currentIndex = -1
+      const distance = cardsContainer.clientWidth - window.innerWidth
 
-    ScrollTrigger.create({
-        trigger: pinHeight,
-        start: 'top top',
-        end: 'bottom bottom',
-        pin: animationContainer,
-        scrub: true,
-        onUpdate: self => {
-            const index = Math.floor(self.progress * (circles.length));
+      const scrollTween = gsap.to(cardsContainer, {
+          x: - distance,
+          ease: 'none',
+          scrollTrigger: {
+              trigger: container,
+              pin: true,
+              scrub: true,
+              start: 'top top',
+              end: '+=' + distance
+          }
+      })
 
-            if(index !== currentIndex && index < circles.length) {
-                if(index > currentIndex) {
-                    circles[index].classList.add('on')
-                    gsap.set(circles[index], {
-                        rotation: (index) * angle
-                    })
-                    gsap.from(circles[index], {
-                        scale: 0.94,
-                        ease: 'elastic.out(0.6, 0.3)',
-                        duration: 0.5
-                    })
-                } else if(index < currentIndex) {
-                    circles[currentIndex].classList.remove('on')
-                }
+      let transformBetweenTwoTicks = 0
+      let oldTransform = 0
+      function tick() {
+          const currentTransform = gsap.getProperty(cardsContainer, "x")
+          transformBetweenTwoTicks = currentTransform - oldTransform
+          oldTransform = currentTransform
+      }
 
-                gsap.to(circlesElement, {
-                    rotation: - index * angle + (angle / 2) * index,
-                    ease: 'elastic.out(0.6, 0.3)',
-                    duration: 0.5
-                })
+      cards.forEach(card => {
+          ScrollTrigger.create({
+              trigger: card,
+              containerAnimation: scrollTween,
+              start: 'left 100%',
+              end: 'right 0%',
+              onEnter: () => {
+                  transformCard(card.children[0])
+              },
+              onEnterBack: () => {
+                  transformCard(card.children[0])
+              }
+          })
+      })
 
-                currentIndex = index
-            }
-        },
-        onLeaveBack: () => {
-            currentIndex = -1
-            circles.forEach(c => c.classList.remove('on'))
-        }
-    })
+      function transformCard(el) {
+          if (!el) return;
+          gsap.fromTo(el, {
+              xPercent: -transformBetweenTwoTicks * 3,
+          }, {
+              xPercent: 0,
+              ease: 'power3.out',
+              duration: 0.7
+          })
+      }
+
+      ScrollTrigger.create({
+          trigger: root,
+          onEnter: () => {gsap.ticker.add(tick)},
+          onLeave: () => {gsap.ticker.remove(tick)},
+          onEnterBack: () => {gsap.ticker.add(tick)},
+          onLeaveBack: () => {gsap.ticker.remove(tick)},
+      })
   }
 
   // 3.4 MWG Effect 053 (3D Rotating Text)
