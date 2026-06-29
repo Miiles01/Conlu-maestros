@@ -76,10 +76,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const cardsContainer = root.querySelector('.cards')
       const cards = root.querySelectorAll('.card')
 
-      const distance = cardsContainer.clientWidth - window.innerWidth
+      const leftPadding = window.innerWidth;
+      const rightPadding = window.innerWidth;
+      const totalCardsWidth = cardsContainer.clientWidth - leftPadding - rightPadding;
+      
+      // Calculate target X to perfectly center the block of cards
+      const targetX = (window.innerWidth - totalCardsWidth) / 2 - leftPadding;
+      const distance = Math.abs(targetX);
 
       const scrollTween = gsap.to(cardsContainer, {
-          x: - distance,
+          x: targetX,
           ease: 'none',
           scrollTrigger: {
               trigger: container,
