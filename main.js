@@ -398,20 +398,36 @@ document.addEventListener('DOMContentLoaded', () => {
   overlays.forEach(overlay => {
     overlay.addEventListener('click', function() {
       const container = this.previousElementSibling; // The .swiper-video-container is right before the overlay
+      const iframe = container.querySelector('iframe');
       
       if (this.classList.contains('is-playing')) {
-        // Stop playing
-        container.innerHTML = '';
+        // Pause playing
+        if (iframe && iframe.contentWindow) {
+          iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        }
         this.classList.remove('is-playing');
+        this.classList.add('is-paused');
+      } else if (this.classList.contains('is-paused')) {
+        // Resume playing
+        if (iframe && iframe.contentWindow) {
+          iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+        }
+        this.classList.remove('is-paused');
+        this.classList.add('is-playing');
       } else {
         // Pause all other videos by clearing their iframes
         sliders.forEach(c => c.innerHTML = '');
-        overlays.forEach(o => o.classList.remove('is-playing'));
+        overlays.forEach(o => {
+          o.classList.remove('is-playing');
+          o.classList.remove('is-paused');
+          o.classList.remove('has-started');
+        });
 
         const videoId = container.getAttribute('data-video-id');
-        container.innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&rel=0&modestbranding=1&playsinline=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+        container.innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
         
         this.classList.add('is-playing');
+        this.classList.add('has-started');
       }
     });
   });
