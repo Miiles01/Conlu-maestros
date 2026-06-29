@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const cardsContainer = root.querySelector('.cards')
       const cards = root.querySelectorAll('.card')
 
-      const distance = cardsContainer.clientWidth - window.innerWidth;
+      const distance = cardsContainer.scrollWidth;
 
       const scrollTween = gsap.to(cardsContainer, {
           x: -distance,
