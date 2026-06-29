@@ -1054,6 +1054,26 @@ body[data-current-theme="dark"] .video-placeholder { background-color: rgba(255,
   filter: brightness(0) invert(1);
 }
 
+.footer__socials {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.footer__socials a {
+  color: var(--color-white);
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__socials a:hover {
+  color: var(--color-lime-green);
+  transform: translateY(-3px);
+}
+
 .footer__links {
   display: flex;
   gap: 1.5rem;
