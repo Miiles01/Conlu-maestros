@@ -1698,3 +1698,111 @@ details.faq-item[open] .faq-arrow { transform: rotate(180deg); }
     max-width: 120px;
   }
 }
+
+/* --- PLANES (contenido PDF Conlú Docentes: Semilla/Raíces/Florece) --- */
+.preventa-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+  max-width: 640px;
+  margin: 0 auto 0.75rem;
+  background: var(--color-deep-blue);
+  color: var(--color-white);
+  padding: 0.9rem 1.5rem;
+  border-radius: var(--radius-md);
+}
+
+.preventa-banner svg { flex-shrink: 0; color: var(--color-yellow-light); }
+
+.preventa-banner p {
+  margin: 0;
+  color: var(--color-white);
+  font-size: 0.95rem;
+}
+
+.preventa-banner strong { color: var(--color-yellow-light); }
+
+.preventa-note {
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-warm-yellow);
+}
+
+.plan-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-cyan-deep);
+  background: rgba(51, 184, 194, 0.15);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.75rem;
+}
+
+.plan-quote {
+  font-style: italic;
+  font-size: 0.9375rem !important;
+}
+
+.price-regular {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  text-decoration: line-through;
+  margin-top: 1rem;
+}
+
+.pricing-card .price { margin-top: 0.25rem; }
+
+.savings {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-red-ink);
+  background: rgba(252, 193, 96, 0.3);
+  padding: 0.25rem 0.9rem;
+  border-radius: var(--radius-sm);
+  margin-top: 0.75rem;
+}
+
+.pricing-card--featured .price-regular { color: rgba(255, 255, 255, 0.6); }
+.pricing-card--featured .savings { background: rgba(255, 255, 255, 0.12); color: var(--color-yellow-light); }
+
+.plan-bono {
+  border: 1px dashed var(--color-warm-yellow);
+  background: rgba(252, 193, 96, 0.12);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.plan-bono__label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-warm-yellow);
+  margin-bottom: 0.25rem;
+}
+
+.plan-bono p {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--color-text-dark);
+}
+
+.plan-bono strong { color: var(--color-deep-blue); }
+
+.pricing-card--featured .plan-bono {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+}
+.pricing-card--featured .plan-bono p { color: rgba(255, 255, 255, 0.9); }
+.pricing-card--featured .plan-bono strong { color: var(--color-white); }
