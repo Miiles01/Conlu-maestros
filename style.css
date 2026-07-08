@@ -610,6 +610,39 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
     }
 }
 
+/* Mobile: sin pin GSAP — carrusel horizontal con swipe táctil (scroll nativo + snap) */
+@media (max-width: 767px) {
+    .mwg_effect001 { overflow: visible; }
+    .mwg_effect001 .horizontal-container {
+        min-height: 0;
+        padding: 1rem 0;
+        overflow: visible;
+    }
+    .mwg_effect001 .cards {
+        flex-direction: row;
+        align-items: stretch;
+        width: 100%;
+        gap: 1rem;
+        padding: 1.75rem 1.5rem 3.25rem; /* espacio extra para que no se corte la sombra de las cards */
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 0 1.5rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+    }
+    .mwg_effect001 .cards::-webkit-scrollbar { display: none; } /* WebKit */
+    .mwg_effect001 .card {
+        flex: 0 0 auto;
+        width: 80vw;
+        max-width: 320px;
+        scroll-snap-align: center;
+    }
+    /* Ocultar las tarjetas espaciadoras invisibles */
+    .mwg_effect001 .cards > .card:not(.solution-card) {
+        display: none;
+    }
+}
+
 .solution-card {
   background: var(--color-white);
   padding: 2.5rem;
@@ -1312,17 +1345,18 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
         height: auto;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 0;
         padding: 0 1.5rem 2rem 1.5rem;
     }
     .mwg_effect053 .section-header {
         transform: none !important;
-        margin-bottom: 0;
+        margin-bottom: 1.25rem;
     }
     .mwg_effect053 .paragraphs {
         position: static;
         width: 100%;
         margin-bottom: 0;
+        line-height: 1.15;
         transform: none !important;
         opacity: 1 !important;
         text-align: center;
@@ -1715,13 +1749,13 @@ details.faq-item[open] .faq-arrow { transform: rotate(180deg); }
 
 .preventa-banner svg { flex-shrink: 0; color: var(--color-yellow-light); }
 
-.preventa-banner p {
+body .preventa-banner p {
   margin: 0;
   color: var(--color-white);
   font-size: 0.95rem;
 }
 
-.preventa-banner strong { color: var(--color-yellow-light); }
+body .preventa-banner strong { color: var(--color-yellow-light); }
 
 .preventa-note {
   max-width: 640px;
