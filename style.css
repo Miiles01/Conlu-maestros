@@ -1739,17 +1739,6 @@ details.faq-item summary::-webkit-details-marker { display: none; }
 details.faq-item summary { list-style: none; }
 details.faq-item[open] .faq-arrow { transform: rotate(180deg); }
 
-/* Isotipo como logo (footer): tamaño contenido para la marca cuadrada */
-.footer-logo__img--isotipo {
-  max-width: 180px;
-}
-
-@media (max-width: 767px) {
-  .footer-logo__img--isotipo {
-    max-width: 120px;
-  }
-}
-
 /* --- PLANES (contenido PDF Conlú Docentes: Semilla/Raíces/Florece) --- */
 .preventa-banner {
   display: flex;
