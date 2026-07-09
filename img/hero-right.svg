@@ -9,7 +9,7 @@
 <circle cx="27" cy="330" r="20" fill="#33B8C2"/>
 <circle cx="140" cy="331" r="20" fill="#33B8C2"/>
 </g>
-<rect width="140" height="140" transform="matrix(1 0 0 -1 140 280)" fill="#FCC160"/>
+<rect width="140" height="140" transform="matrix(1 0 0 -1 140 280)" fill="#EFA624"/>
 <path d="M255 210L140 140V280L255 210Z" fill="#FCC160"/>
 <g clip-path="url(#clip1_2346_464)">
 <rect width="140" height="140" transform="matrix(1 0 0 -1 280 140)" fill="#33B8C2"/>
