@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
             trigger: mwg001,
             pin: true,
             scrub: true,
-            start: 'top top',
+            start: 'center center',
             end: () => '+=' + getScrollDistance(),
             invalidateOnRefresh: true
         }
