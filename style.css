@@ -1846,3 +1846,34 @@ body .preventa-banner strong { color: var(--color-yellow-light); }
 }
 .pricing-card--featured .plan-bono p { color: rgba(255, 255, 255, 0.9); }
 .pricing-card--featured .plan-bono strong { color: var(--color-white); }
+
+/* --- REDUCED MOBILE SPACING --- */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0 !important;
+  }
+  .section-header {
+    margin-bottom: 2rem !important;
+  }
+  /* Reduce spacing between elements in split views */
+  .split-content .media, 
+  .split-content .image-wrapper,
+  .video-container {
+    margin-top: 1.5rem !important;
+  }
+  /* Reduce spacing around cards/blocks like FAQ and Guarantee */
+  .faq-section .gs-reveal-up,
+  .cta-final .gs-reveal-up,
+  .cta-box {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    padding: 2rem 1.5rem !important;
+  }
+  /* Grids */
+  .intelligences-grid, .grid, .stats-grid, .testimonials-cards {
+    gap: 1.5rem !important;
+  }
+  .stats-grid {
+    margin-bottom: 2rem !important;
+  }
+}
