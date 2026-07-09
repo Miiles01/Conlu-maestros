@@ -30,7 +30,7 @@
 <circle cx="93" cy="112" r="5" fill="white"/>
 <circle cx="116" cy="112" r="5" fill="white"/>
 <rect width="140" height="140" transform="translate(140 140)" fill="#FCC160"/>
-<path d="M209.5 153L259.296 181.75V239.25L209.5 268L159.704 239.25V181.75L209.5 153Z" fill="#EFA624"/>
+<path d="M209.5 153L259.296 181.75V239.25L209.5 268L159.704 239.25V181.75L209.5 153Z" fill="#FCC160"/>
 <g clip-path="url(#clip1_2346_427)">
 <rect width="140" height="140" transform="translate(280 280)" fill="#303273"/>
 <circle cx="350" cy="420" r="70" fill="#33B8C2"/>
