@@ -1,24 +1,19 @@
 :root {
-  /* Brand Colors — Conlú (Uso del Logo.pdf, mismo feedback que landing padres) */
-  --color-deep-blue: #2F2F77;      /* Azul marca */
-  --color-lime-green: #9DC423;     /* Verde Amarillento */
+  /* Brand Colors — Uso del Logo (maestros).pdf, paleta oficial CONLÚ INSTITUTE (docentes) */
+  --color-deep-blue: #303273;      /* Azul Conlú — color principal institucional */
+  --color-sky-blue: #7184BD;       /* Azul Claro */
   --color-warm-yellow: #EFA624;    /* Naranja */
-  --color-light-blue: #5B6AAB;     /* Azul Apagado */
+  --color-light-blue: #5B6AAB;     /* Azul Suave */
   --color-off-white: #F7F0F3;
   --color-white: #FFFFFF;
-  --color-lime-light: #D4DE6E;     /* Verde Lima */
   --color-yellow-light: #FCC160;   /* Amarillo */
-  --color-red-pastel: #EF7E81;     /* Rojo pastel */
   --color-cyan: #33B8C2;           /* Cian */
   /* Tintes derivados de la paleta (fondos de sección) */
   --color-cream: #FDF3E3;
   --color-mint: #F4F7DC;
   --color-cyan-tint: #85D4DA;
-  --color-red-tint: #F5B2B3;
   /* Tonos oscurecidos para texto con contraste AA */
   --color-cyan-deep: #1E7E86;
-  --color-red-deep: #C6494D;
-  --color-red-ink: #8A2E31;
   --color-text-dark: #1F2937;
   --color-text-light: #6B7280;
 
@@ -167,8 +162,8 @@ body[data-current-theme="dark"] .problem-card {
   background-color: rgba(255,255,255,0.05); 
   border-color: rgba(255,255,255,0.1); 
 }
-body[data-current-theme="dark"] .subtitle { color: var(--color-lime-green); }
-body[data-current-theme="dark"] .stat h3 { color: var(--color-lime-green); }
+body[data-current-theme="dark"] .subtitle { color: var(--color-cyan); }
+body[data-current-theme="dark"] .stat h3 { color: var(--color-cyan); }
 body[data-current-theme="dark"] .video-placeholder { background-color: rgba(255,255,255,0.05); }
 
 /* Cream Theme (tinte de Amarillo #FCC160) */
@@ -177,13 +172,13 @@ body[data-current-theme="cream"] h1, body[data-current-theme="cream"] h2, body[d
 body[data-current-theme="cream"] p { color: var(--color-text-light); }
 body[data-current-theme="cream"] .subtitle { color: var(--color-light-blue); }
 
-/* Mint Theme (tinte de Verde Lima #D4DE6E) */
+/* Mint Theme (tinte neutro pálido) */
 body[data-current-theme="mint"] { background-color: var(--color-mint); color: var(--color-text-dark); }
 body[data-current-theme="mint"] h1, body[data-current-theme="mint"] h2, body[data-current-theme="mint"] h3, body[data-current-theme="mint"] h4 { color: var(--color-deep-blue); }
 body[data-current-theme="mint"] p { color: var(--color-text-light); }
 body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
 
-.text-lime { color: var(--color-lime-green); }
+.text-lime { color: var(--color-cyan); }
 .text-orange { color: var(--color-warm-yellow); }
 
 .center { text-align: center; }
@@ -246,7 +241,7 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
 }
 
 .btn--primary {
-  background-color: var(--color-lime-green);
+  background-color: var(--color-cyan);
   color: var(--color-deep-blue);
 }
 
@@ -289,7 +284,7 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
   padding: 0.5rem 1rem;
   padding: 0.5rem 1rem;
   border-radius: 100px;
-  box-shadow: 0 10px 40px rgba(47, 47, 119, 0.08);
+  box-shadow: 0 10px 40px rgba(48, 50, 115, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -361,7 +356,7 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
     transform: translateX(-50%);
   }
   .nav a:hover {
-    color: var(--color-lime-green);
+    color: var(--color-cyan);
   }
 }
 
@@ -528,7 +523,7 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
 }
 
 .mwg_effect087 .card:nth-child(1) .card-content { background: var(--color-white); border: none; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
-.mwg_effect087 .card:nth-child(2) .card-content { background: var(--color-lime-green); }
+.mwg_effect087 .card:nth-child(2) .card-content { background: var(--color-cyan); }
 .mwg_effect087 .card:nth-child(2) .problem-card__content h3, .mwg_effect087 .card:nth-child(2) .problem-card__content p { color: var(--color-deep-blue); }
 .mwg_effect087 .card:nth-child(3) .card-content { background: var(--color-deep-blue); }
 .mwg_effect087 .card:nth-child(3) .problem-card__content h3, .mwg_effect087 .card:nth-child(3) .problem-card__content p { color: var(--color-white); }
@@ -669,12 +664,12 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
   padding: 2.5rem;
   border-radius: var(--radius-lg);
   border: 1px solid rgba(0,0,0,0.03);
-  box-shadow: 0 15px 35px rgba(47, 47, 119, 0.08); /* Permanent shadow prevents overlapping white cards from looking "cut" */
+  box-shadow: 0 15px 35px rgba(48, 50, 115, 0.08); /* Permanent shadow prevents overlapping white cards from looking "cut" */
   transition: box-shadow var(--transition-smooth);
 }
 
 .solution-card:hover {
-  box-shadow: 0 25px 50px rgba(47, 47, 119, 0.12);
+  box-shadow: 0 25px 50px rgba(48, 50, 115, 0.12);
 }
 
 .solution-card__icon {
@@ -728,7 +723,7 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
 .play-btn {
   width: 80px;
   height: 80px;
-  background: var(--color-lime-green);
+  background: var(--color-cyan);
   border: none;
   border-radius: 50%;
   color: var(--color-deep-blue);
@@ -911,7 +906,7 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
   background: var(--color-deep-blue);
   color: var(--color-white);
   border: none;
-  box-shadow: 0 20px 40px rgba(47, 47, 119, 0.15);
+  box-shadow: 0 20px 40px rgba(48, 50, 115, 0.15);
   z-index: 1;
 }
 
@@ -960,7 +955,7 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
   top: -16px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--color-lime-green);
+  background: var(--color-cyan);
   color: var(--color-deep-blue);
   padding: 0.5rem 1rem;
   border-radius: 20px;
@@ -1045,7 +1040,7 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
 .pricing-features li svg {
   width: 20px;
   height: 20px;
-  stroke: var(--color-lime-green);
+  stroke: var(--color-cyan);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -1063,7 +1058,7 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
-  box-shadow: 0 20px 40px rgba(47, 47, 119, 0.05);
+  box-shadow: 0 20px 40px rgba(48, 50, 115, 0.05);
 }
 
 .email-form {
@@ -1162,7 +1157,7 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
 }
 
 .footer__socials a:hover {
-  color: var(--color-lime-green);
+  color: var(--color-cyan);
   transform: translateY(-3px);
 }
 
@@ -1436,7 +1431,7 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
 }
 
 .pricing-features li svg {
-  stroke: var(--color-lime-green) !important;
+  stroke: var(--color-cyan) !important;
 }
 
 /* Hamburger Menu & Mobile Navigation */
@@ -1593,7 +1588,7 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: var(--color-lime-green);
+  background: var(--color-cyan);
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -1613,7 +1608,7 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
 
 .custom-play-btn:hover {
   transform: translate(-50%, -50%) scale(1.1);
-  background: var(--color-lime-green);
+  background: var(--color-cyan);
 }
 
 .custom-play-btn .play-icon {
@@ -1819,7 +1814,7 @@ body .preventa-banner strong { color: var(--color-yellow-light); }
   display: inline-block;
   font-size: 0.8125rem;
   font-weight: 700;
-  color: var(--color-red-ink);
+  color: var(--color-deep-blue);
   background: rgba(252, 193, 96, 0.3);
   padding: 0.25rem 0.9rem;
   border-radius: var(--radius-sm);
