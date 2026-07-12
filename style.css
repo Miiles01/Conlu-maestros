@@ -1859,34 +1859,40 @@ body .preventa-banner strong { color: var(--color-yellow-light); }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  max-width: 1000px;
+  max-width: 1050px;
   margin: 3rem auto 0;
 }
 .int-card {
   background: white;
-  border-radius: 20px 20px 12px 12px;
-  border: 2px solid var(--c);
+  border-radius: 24px 24px 12px 12px;
+  border: 1px solid var(--c);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px 15px 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
+  padding: 30px 15px 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
 .int-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 .int-icon {
   color: var(--c);
-  margin-bottom: 12px;
+  margin-bottom: 15px;
+}
+.int-icon svg {
+  width: 52px;
+  height: 52px;
+  stroke-width: 1.25;
 }
 .int-num {
   color: var(--c);
   font-weight: 800;
   font-size: 1.1rem;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 .int-name {
   color: var(--color-deep-blue);
@@ -1907,10 +1913,14 @@ body .preventa-banner strong { color: var(--color-yellow-light); }
   }
   .int-card {
     padding: 20px 10px 15px;
+    border-radius: 18px 18px 10px 10px;
+  }
+  .int-icon svg {
+    width: 44px;
+    height: 44px;
   }
   .int-icon {
-    transform: scale(0.85);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
   .int-name {
     font-size: 0.85rem;
