@@ -120,7 +120,7 @@ a {
 }
 
 .section {
-  padding: clamp(8rem, 15vw, 16rem) 0;
+  padding: clamp(5rem, 8vw, 9rem) 0;
   position: relative;
   z-index: 2;
 }
@@ -1835,5 +1835,21 @@ body .preventa-banner strong { color: var(--color-yellow-light); }
   }
   .stats-grid {
     margin-bottom: 2rem !important;
+  }
+}
+
+/* Imagen explicativa de las 12 inteligencias (reemplaza la rueda animada) */
+.intelligences-explainer-img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 3rem auto 0;
+  border-radius: var(--radius-lg);
+}
+
+@media (max-width: 767px) {
+  .intelligences-explainer-img {
+    margin-top: 2rem;
+    border-radius: var(--radius-md);
   }
 }
