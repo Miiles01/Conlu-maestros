@@ -1886,7 +1886,8 @@ body .preventa-banner strong { color: var(--color-yellow-light); }
 .int-icon svg {
   width: 64px;
   height: 64px;
-  stroke-width: 1.25;
+  stroke-width: 2.5;
+  overflow: visible;
 }
 .int-num {
   color: var(--c);
