@@ -1,3 +1,22 @@
+@font-face {
+  font-family: 'Pacifico';
+  src: url('/fonts/Pacifico-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.highlight-pacifico {
+  font-family: 'Pacifico', cursive;
+  font-weight: normal;
+  color: var(--c, var(--color-warm-yellow)); /* use local var --c if available or fallback */
+  display: inline-block;
+  padding: 0 0.1em;
+  overflow: visible;
+  line-height: 1.1;
+  text-transform: none;
+}
+
 :root {
   /* Brand Colors — Uso del Logo (maestros).pdf, paleta oficial CONLÚ INSTITUTE (docentes) */
   --color-deep-blue: #303273;      /* Azul Conlú — color principal institucional */
