@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <script type="module" crossorigin src="./assets/index-DBpN08O5.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-tBKjFEcw.css">
+    <script type="module" crossorigin src="./assets/index-cOTZCKKk.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CekVP1ic.css">
   </head>
   <body>
     <!-- HEADER -->
@@ -447,12 +447,20 @@
       <!-- VIDEO ESPACIO -->
       <section class="video-section section" data-theme="light">
         <div class="container">
-          <div class="video-container gs-reveal-up">
-            <div class="video-placeholder" style="padding:0; pointer-events: none;">
-              <iframe class="demo-video-desktop" width="100%" height="100%" src="https://www.youtube.com/embed/Kq7Aj7Qd5Ec?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&loop=1&playlist=Kq7Aj7Qd5Ec" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
-              <video class="demo-video-mobile" width="100%" height="100%" autoplay loop muted playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit: cover;">
-                <source src="./videos/institute-2-1-optimized.mp4" type="video/mp4">
-              </video>
+                    <div class="video-container gs-reveal-up">
+            <!-- Desktop/tablet: video horizontal de YouTube, pausado hasta dar clic -->
+            <div class="video-facade demo-video-desktop" data-video-id="Kq7Aj7Qd5Ec">
+              <img src="https://img.youtube.com/vi/Kq7Aj7Qd5Ec/maxresdefault.jpg" alt="Video demo" loading="lazy">
+              <button class="play-circle" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+            <!-- Mobile: video vertical local, pausado hasta dar clic -->
+            <div class="video-facade-local demo-video-mobile">
+              <video preload="metadata" playsinline src="./videos/institute-2-1-optimized.mp4#t=0.1"></video>
+              <button class="play-circle" aria-label="Reproducir video">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </button>
             </div>
           </div>
         </div>
