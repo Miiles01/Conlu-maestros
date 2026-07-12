@@ -1662,7 +1662,7 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
 .problem-hero-img {
   width: 100%;
   max-width: 1000px;
-  height: auto;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
   border-radius: var(--radius-lg);
   margin: 0 auto 3rem;
