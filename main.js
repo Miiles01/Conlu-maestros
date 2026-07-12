@@ -473,3 +473,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+
+
+// Fachadas de video: círculo verde + play blanco; al clic reproducen CON sonido y controles
+document.querySelectorAll('.video-facade[data-video-id]').forEach(facade => {
+  facade.addEventListener('click', () => {
+    const id = facade.getAttribute('data-video-id');
+    facade.innerHTML = `<iframe src="https://www.youtube.com/embed/${id}?autoplay=1&controls=1&rel=0&modestbranding=1&playsinline=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+    facade.classList.add('is-playing');
+  }, { once: true });
+});
+
+document.querySelectorAll('.video-facade-local').forEach(facade => {
+  const video = facade.querySelector('video');
+  if (!video) return;
+  facade.addEventListener('click', () => {
+    video.muted = false;
+    video.volume = 1;
+    video.setAttribute('controls', '');
+    video.play();
+    facade.classList.add('is-playing');
+  }, { once: true });
+});

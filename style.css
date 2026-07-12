@@ -1926,3 +1926,71 @@ body .preventa-banner strong { color: var(--color-yellow-light); }
     font-size: 0.85rem;
   }
 }
+
+/* Fachada de video: imagen pausada + círculo verde con play blanco */
+.video-facade,
+.video-facade-local {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--color-deep-blue);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.video-facade {
+  aspect-ratio: 16 / 9;
+}
+
+.video-facade-local {
+  aspect-ratio: 9 / 16;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.video-facade img,
+.video-facade iframe,
+.video-facade-local video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+  display: block;
+}
+
+.play-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 84px;
+  height: 84px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-lime-green);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease;
+}
+
+.play-circle svg {
+  width: 36px;
+  height: 36px;
+  margin-left: 4px;
+}
+
+.play-circle:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.is-playing .play-circle {
+  display: none;
+}
