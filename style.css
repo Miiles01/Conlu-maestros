@@ -1884,8 +1884,8 @@ body .preventa-banner strong { color: var(--color-yellow-light); }
   margin-bottom: 15px;
 }
 .int-icon svg {
-  width: 52px;
-  height: 52px;
+  width: 64px;
+  height: 64px;
   stroke-width: 1.25;
 }
 .int-num {
@@ -1915,12 +1915,16 @@ body .preventa-banner strong { color: var(--color-yellow-light); }
     padding: 20px 10px 15px;
     border-radius: 18px 18px 10px 10px;
   }
-  .int-icon svg {
-    width: 44px;
-    height: 44px;
+  .int-icon {
+    width: 42px;
+    height: 42px;
   }
   .int-icon {
     margin-bottom: 10px;
+  }
+  .int-icon svg {
+    width: 52px;
+    height: 52px;
   }
   .int-name {
     font-size: 0.85rem;
