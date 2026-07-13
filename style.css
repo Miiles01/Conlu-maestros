@@ -369,7 +369,7 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   .nav {
     display: flex;
     gap: 2rem;
@@ -381,6 +381,16 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
   }
   .nav a:hover {
     color: var(--color-cyan);
+  }
+}
+
+/* Tablet: el nav completo no cabe — usar hamburguesa como en móvil */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header .hamburger.mobile-only {
+    display: block !important;
+  }
+  .header__actions .desktop-only {
+    display: none !important;
   }
 }
 
@@ -503,6 +513,119 @@ body[data-current-theme="mint"] .subtitle { color: var(--color-light-blue); }
 
 .hero__trust span {
   color: var(--color-deep-blue);
+}
+
+/* Hero split (texto izquierda / imagen derecha) */
+section.hero--split[data-theme] {
+  background-color: var(--color-white);
+}
+
+.hero--split::after {
+  display: none;
+}
+
+.hero--split .hero__inner {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: var(--space-lg);
+  text-align: left;
+}
+
+.hero--split .hero__title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+}
+
+/* Pacifico +15% de tamaño en toda la página, como en padres (la base de la clase está al inicio del archivo) */
+.highlight-pacifico {
+  font-size: 1.15em;
+}
+
+.hero--split .highlight-pacifico {
+  color: var(--color-light-blue);
+}
+
+.hero__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.hero__feature {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-deep-blue);
+  font-weight: 500;
+  font-size: 1.0625rem;
+}
+
+.hero__feature-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-light-blue);
+}
+
+.hero--split .hero__actions {
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+
+.hero__media img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg, 24px);
+  display: block;
+}
+
+/* Botones en una sola fila en tablet y desktop */
+@media (min-width: 768px) {
+  .hero--split .hero__actions {
+    flex-wrap: nowrap;
+  }
+
+  .hero--split .hero__actions .btn {
+    white-space: nowrap;
+    padding: 1rem 1.5rem;
+    font-size: clamp(0.95rem, 1.4vw, 1.125rem);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero--split .hero__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .hero--split {
+    padding-top: 120px;
+    padding-bottom: var(--space-lg);
+  }
+}
+
+/* Móvil: texto centrado como en la landing de padres */
+@media (max-width: 767px) {
+  .hero--split .hero__inner {
+    text-align: center;
+  }
+
+  .hero--split .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__features {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
 }
 
 /* MWG Effect 087 Animation */
