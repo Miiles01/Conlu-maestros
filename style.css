@@ -2160,3 +2160,14 @@ details > summary::-webkit-details-marker {
 details > summary::marker {
   display: none !important;
 }
+
+@media (max-width: 767px) {
+  .play-circle {
+    width: 68px;
+    height: 68px;
+  }
+  .play-circle svg {
+    width: 30px;
+    height: 30px;
+  }
+}
