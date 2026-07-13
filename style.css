@@ -537,6 +537,7 @@ section.hero--split[data-theme] {
   font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1.25;
   margin-bottom: 1.5rem;
+  color: var(--color-text-dark);
 }
 
 /* Pacifico +15% de tamaño en toda la página, como en padres (la base de la clase está al inicio del archivo) */
@@ -544,8 +545,9 @@ section.hero--split[data-theme] {
   font-size: 1.15em;
 }
 
+/* Mismo morado que el hero de padres */
 .hero--split .highlight-pacifico {
-  color: var(--color-light-blue);
+  color: #4C39B7;
 }
 
 .hero__features {
