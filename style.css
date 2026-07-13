@@ -2148,3 +2148,13 @@ body .preventa-banner strong { color: var(--color-yellow-light); }
 .is-playing .play-circle {
   display: none;
 }
+
+details > summary {
+  list-style: none !important;
+}
+details > summary::-webkit-details-marker {
+  display: none !important;
+}
+details > summary::marker {
+  display: none !important;
+}
