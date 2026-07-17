@@ -2182,7 +2182,7 @@ details > summary::marker {
 
 @media (max-width: 767px) {
   .inteligencias-img {
-    max-width: 250px;
+    max-width: 95%;
   }
 }
 
